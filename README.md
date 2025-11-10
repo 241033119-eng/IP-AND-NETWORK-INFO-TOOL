@@ -1,58 +1,54 @@
-🧰 Project Title:
+🧠 Project Title:
 
-IP and Network Info Tool
+IP and Networking Tools in Unix
 
-Meaning / Description:
+🎯 Objective:
 
-The IP and Network Info Tool is a simple Unix-based shell script that displays important information about the system’s network configuration.
+To create a Unix-based command-line tool that gathers and displays network-related information such as:
 
-It helps the user to view the system’s IP address, list all available network interfaces, and count the number of active network connections currently open on the system.
+System IP address
 
-Main Features:
+Active network interfaces
 
-Display System IP Address
+Active network connections
 
-Shows the local IP (like 192.168.1.5) assigned to your system.
+Hostname and DNS info
 
-Display Network Interfaces
+Ping/Connectivity test
 
-Lists all active interfaces (like eth0, wlan0, lo).
+This project helps users understand how Unix handles networking through system calls and shell commands.
 
-Display Active Connections
+⚙️ Tools & Technologies Used:
 
-Counts and shows the number of currently active network connections.
-🧩 Objectives:
+Unix/Linux shell scripting (bash)
 
-To display the system’s IP address.
+Commands: ifconfig, ip, netstat, ping, hostname, nslookup
 
-To list the active network interface(s).
+Optional: awk, grep, sed for parsing output
 
-To show the number of active connections.
+🏗️ Project Description:
 
-To practice using Unix networking commands and scripting.
+The IP and Networking Tools project is a Unix shell script that collects and displays various details about the system’s network configuration and connections.
+It’s similar to a lightweight diagnostic tool (like a mini version of ifconfig or ip addr show).
 
-To create a user-friendly tool for basic network information.
+🧩 Features:
 
-🧠 Concepts Used:
-Shell scripting (variables, commands, output formatting)
+Display System Hostname
 
-Unix networking utilities (ip, hostname, ss)
+Show IP Address(es)
 
-Command substitution ($(...))
+List Active Network Interfaces
 
-Piping and filtering (|, grep, awk)
+Count Active Connections
 
-📚 Applications:
+Ping Test for Connectivity
 
-System administrators can quickly check network info.
+Display DNS Information 
 
-Useful for troubleshooting or network diagnostics.
+🌟 Features:
 
-Can be extended to monitor connection logs or detect IP changes.
-
-Educational tool for understanding basic Unix networking commands.
-
-✅ Conclusion:
-
-The IP and Network Info Tool successfully displays the system’s network information — including IP address, active interface, and active connections — in a clear and organized format.
-This project demonstrates the power and simplicity of Unix shell scripting in automating system tasks and extracting useful information from the operating system.
+✅ Menu-driven interface
+✅ Shows hostname and IP address
+✅ Lists interfaces and connections
+✅ Includes ping and DNS tools
+✅ Works on any Unix/Linux system
