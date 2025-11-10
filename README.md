@@ -52,3 +52,18 @@ Display DNS Information
 ✅ Lists interfaces and connections
 ✅ Includes ping and DNS tools
 ✅ Works on any Unix/Linux system
+
+
+
+<img width="621" height="512" alt="Screenshot 2025-11-10 162257" src="https://github.com/user-attachments/assets/c165a489-4925-46fc-9ac7-f6764dfabef5" />
+<img width="573" height="501" alt="Screenshot 2025-11-10 162312" src="https://github.com/user-attachments/assets/1087f870-4e6c-4719-866b-1e08bce7ed08" />
+<img width="556" height="558" alt="Screenshot 2025-11-10 162321" src="https://github.com/user-attachments/assets/59850e7f-83f9-485c-9f4c-aaebb5b6c827" />
+<img width="583" height="492" alt="Screenshot 2025-11-10 162332" src="https://github.com/user-attachments/assets/d2111fda-d52a-4cfc-ad11-5435726e5706" />
+<img width="960" height="712" alt="Screenshot 2025-11-10 162400" src="https://github.com/user-attachments/assets/2ee6a5b3-7b02-4928-bb28-affd6f077f6f" />
+<img width="696" height="737" alt="Screenshot 2025-11-10 162502" src="https://github.com/user-attachments/assets/3edb6b5c-e80a-4799-aca3-2b5db418b29f" />
+
+
+
+
+
+
