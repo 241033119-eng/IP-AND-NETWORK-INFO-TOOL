@@ -1,0 +1,78 @@
+#!/bin/bash
+
+# IP and Network Info Tool - Unix Project
+# Author: VaNsH Chopra
+# Description: Displays system and network information.
+
+show_header() {
+    clear
+    echo -e "\033[1;34m===============================================\033[0m"
+    echo -e "\033[1;32m          IP and Network Info Tool\033[0m"
+    echo -e "\033[1;34m===============================================\033[0m"
+    echo " Date: $(date)"
+    echo
+}
+
+while true
+do
+    show_header
+    echo -e "\033[1;36m1) Show Hostname\033[0m"
+    echo -e "\033[1;36m2) Show IP Address\033[0m"
+    echo -e "\033[1;36m3) List Network Interfaces\033[0m"
+    echo -e "\033[1;36m4) Show Active Connections\033[0m"
+    echo -e "\033[1;36m5) Ping a Website\033[0m"
+    echo -e "\033[1;36m6) DNS Lookup\033[0m"
+    echo -e "\033[1;36m7) Exit\033[0m"
+    echo "-----------------------------------------------"
+    read -p "Choose an option [1-7]: " choice
+    echo
+
+    case $choice in
+        1)
+            echo "🔹 Hostname:"
+            hostname
+            ;;
+        2)
+            echo "🔹 IP Address:"
+            hostname -I
+            ;;
+        3)
+            echo "🔹 Network Interfaces:"
+            if command -v ip &> /dev/null; then
+                ip -o link show | awk -F': ' '{print $2}'
+            else
+                ifconfig -a | grep flags | awk -F: '{print $1}'
+            fi
+            ;;
+        4)
+            echo "🔹 Active Connections:"
+            if command -v ss &> /dev/null; then
+                ss -tun | grep ESTAB | wc -l | awk '{print "Established Connections:", $1}'
+            else
+                netstat -an | grep ESTABLISHED | wc -l | awk '{print "Established Connections:", $1}'
+            fi
+            ;;
+        5)
+            read -p "Enter a website to ping: " site
+            echo "Pinging $site..."
+            ping -c 4 $site
+            ;;
+        6)
+            read -p "Enter a domain for DNS lookup: " domain
+            echo "DNS Lookup for $domain:"
+            nslookup $domain | grep "Address"
+            ;;
+        7)
+            echo "Exiting... Goodbye!"
+            sleep 1
+            clear
+            exit
+            ;;
+        *)
+            echo "Invalid choice. Please select a valid option."
+            ;;
+    esac
+
+    echo
+    read -p "Press Enter to continue..."
+done
